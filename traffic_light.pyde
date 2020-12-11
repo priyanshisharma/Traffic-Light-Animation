@@ -66,6 +66,29 @@ def setup():
 def draw():
     background(92,207,255) #Sky in backround
     
+    #Writing my name and roll number
+    fill(0);
+    textSize(20);
+    text("Roll: 18115060",width/2+310,50);
+    text("Priyanshi Sharma",width/2+310,80);
+    
+    #Sun
+    fill(255, 170, 0);
+    ellipse(225, 60, 100, 100);
+    
+    # Clouds 
+    fill(255, 255, 255)
+    
+    # Left cloud
+    ellipse(195, 115, 126, 97)
+    ellipse(195+62, 115, 70, 60)
+    ellipse(195-62, 115, 70, 60)
+    
+    # Right Cloud
+    ellipse(330, 70, 126, 97)
+    ellipse(330+62, 70, 70, 60)
+    ellipse(330-62, 70, 70, 60)
+    
     #Drawing the road
     fill(120,128,131)
     strokeWeight(0)
@@ -91,4 +114,9 @@ def draw():
             tl.display()
         else: #If amber change to green
             time.sleep(2) #Change to green after 2 seconds (of Amber)
-            tl.ch='G'    
+            tl.ch='G'
+    else: #Display, click to make it green
+        if tl.ch!='G':
+            fill(0)
+            text("Click to make the light green",width/2-70,50);
+            
